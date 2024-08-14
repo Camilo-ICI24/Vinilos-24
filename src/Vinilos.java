@@ -14,11 +14,12 @@ class coleccionDeVinilos {
         System.out.print("Ingrese la cantidad de discos que desea añadir: ");
         int cantidadASubir = info.nextInt();
         for (int i = 0; i < cantidadASubir ; i++) {
-            for (int fila = 0; fila = cantidadASubir - 1; fila++) {
-                for (int columna = 0; columna = 2; columna++) {
+            for (int fila = 0; fila <= cantidadASubir - 1; fila++) {
+                for (int columna = 0; columna <= 2; columna++) {
                     System.out.print("Ingrese el grupo autor del disco: ");
                     String grupo = info.nextLine();
-                    System.out.print()
+                    System.out.print("Ingrese el nombre del disco: ");
+                    String nombre = info.nextLine();
                 }
             }
 
