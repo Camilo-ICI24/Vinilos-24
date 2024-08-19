@@ -6,11 +6,11 @@ class coleccionDeVinilos {
     public static void main(String[] args) {
         Scanner usuario = new Scanner(System.in);
         String[][] informacion = new String[100][3];
-        agregarDisco(informacion);
+        agregarDisco(informacion, usuario);
 
         System.out.println("Espacio máximo de la colección: " +informacion.length);
 
-        System.out.print("Ingrese el nombre de un autor para buscar un disco: ");
+        System.out.println("Ingrese el nombre de un disco para buscarlo: ");
         String nombre = usuario.nextLine();
         buscarVinilo(informacion, nombre);
 
@@ -20,8 +20,7 @@ class coleccionDeVinilos {
         usuario.close();
     }
 
-    public static void agregarDisco(String[][] m) {
-        Scanner info = new Scanner(System.in);
+    public static void agregarDisco(String[][] m, Scanner info) {
         System.out.print("Ingrese la cantidad de discos que desea añadir: ");
         int cantidadASubir = info.nextInt();
         info.nextLine();
@@ -48,7 +47,6 @@ class coleccionDeVinilos {
                 break;
             }
         }
-        info.close();
     }
 
     public static void buscarVinilo(String[][] m, String busca) {
@@ -56,9 +54,9 @@ class coleccionDeVinilos {
         boolean existe = false;
         for (int fila = 0; fila < m.length; fila++) {
             if (m[fila][1].equalsIgnoreCase(busca)) {
-                System.out.print("Disco: " + m[fila][0]);
-                System.out.println(m[fila][1]);
-                System.out.println(m[fila][2]);
+                System.out.println("Autor: " + m[fila][0]);
+                System.out.println("Disco: "m[fila][1]);
+                System.out.println("Año de lanzamiento: "(m[fila][2]);
                 existe = true;
                 break;
             }
@@ -75,7 +73,7 @@ class coleccionDeVinilos {
                 discosRegistrados += 1;
             }
         }
-        System.out.print("La cantidad de discos en la colección son: " + discosRegistrados);
+        System.out.println("La cantidad de discos en la colección son: " + discosRegistrados);
     }
 
     public static void contarDisponible(String[][] m) {
@@ -85,6 +83,6 @@ class coleccionDeVinilos {
                 estaVacio += 1;
             }
         }
-        System.out.print("Espacio disponible de almacenamiento: " +estaVacio);
+        System.out.println("Espacio disponible de almacenamiento: " +estaVacio);
     }
 }
