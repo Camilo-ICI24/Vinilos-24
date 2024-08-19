@@ -55,8 +55,8 @@ class coleccionDeVinilos {
         for (int fila = 0; fila < m.length; fila++) {
             if (m[fila][1].equalsIgnoreCase(busca)) {
                 System.out.println("Autor: " + m[fila][0]);
-                System.out.println("Disco: "m[fila][1]);
-                System.out.println("Año de lanzamiento: "(m[fila][2]);
+                System.out.println("Disco: " + m[fila][1]);
+                System.out.println("Año de lanzamiento: "+ m[fila][2]);
                 existe = true;
                 break;
             }
